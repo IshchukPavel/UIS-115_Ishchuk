@@ -47,11 +47,14 @@ public:
      \brief	Конструктор присвоения по умолчанию
      */
     Rhombus& operator=(const Rhombus&) = default;
+
+    ostream& operator<<(std::ostream& out, Rhombus& F);
     /**
      \brief	Деструктор по умолчанию
      */
 
     ~Rhombus() = default;
+
 
     /**
      \brief	Возвращает верхную верщину ромба по координате x.
