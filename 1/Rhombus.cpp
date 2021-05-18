@@ -19,7 +19,7 @@ Rhombus::Rhombus(double x0, double y0, double diag_x, double diag_y)
 {
     set_diagonals(x0, y0, diag_x, diag_y);
 }
-ostream& Rhombus::operator<<(std::ostream& out, Rhombus& F)
+ostream& operator<<(std::ostream& out, Rhombus& F)
 {
     return out << F.get_up_vertex_rhombus_x1() << " | " << F.get_down_vertex_rhombus_x2() << " | " << F.get_left_vertex_rhombus_x3() << " | " << F.get_right_vertex_rhombus_x4();
     return out << F.get_up_vertex_rhombus_y1() << " | " << F.get_down_vertex_rhombus_y2() << " | " << F.get_left_vertex_rhombus_y3() << " | " << F.get_right_vertex_rhombus_y4();

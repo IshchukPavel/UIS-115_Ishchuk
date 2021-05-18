@@ -48,7 +48,7 @@ public:
      */
     Rhombus& operator=(const Rhombus&) = default;
 
-    ostream& operator<<(std::ostream& out, Rhombus& F);
+    friend ostream& operator<<(std::ostream& out, Rhombus& F);
     /**
      \brief	Деструктор по умолчанию
      */
