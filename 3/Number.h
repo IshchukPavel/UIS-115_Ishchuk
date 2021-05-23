@@ -13,6 +13,8 @@ public:
      \brief Конструктор по умолчанию */
     Number();
 
+    friend ostream& operator<<(std::ostream& out, Number& F);
+
     /**
      \brief	Конструктор
      \param 	n	Переменная.

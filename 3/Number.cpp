@@ -6,9 +6,7 @@ Number::Number() {
 }
 Number::Number(float n) : val(n) { }
 Number Number::operator+(Number& other) {
-    Number temp;
-    temp.val = val + other.val;
-    return temp;
+    return this->val + other.val;
 }
 Number Number:: operator/(Number& other) {
     Number temp;
