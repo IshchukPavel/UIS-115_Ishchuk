@@ -9,7 +9,7 @@ int main() {
 	int a;
 	cin >> a;
 	Triangle Triangle(6, 5, 5, 4);
-	Square Square(4);
+	Square Square(5);
 	Ellipse Ellipse(8, 6);
 	switch (a)
 	{

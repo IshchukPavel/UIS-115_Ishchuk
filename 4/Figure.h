@@ -18,4 +18,3 @@ public:
 	*/
 	virtual ~Figure() = 0;
 };
-Figure::~Figure() {};

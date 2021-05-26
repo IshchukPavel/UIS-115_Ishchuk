@@ -9,5 +9,5 @@ double Triangle::Perimetr()
 
 double Triangle::Area()
 {
-	return (foundation + height) / 2;
+	return (foundation * height) / 2;
 }
