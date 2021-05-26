@@ -10,7 +10,7 @@ public:
 	/**
 	* \brief † онструктор с параметрами
 	*/
-	Ellipse (double a, double b);
+	explicit Ellipse (double a, double b);
 
 	/**
 	* \brief †ƒеструктор по умолчанию
