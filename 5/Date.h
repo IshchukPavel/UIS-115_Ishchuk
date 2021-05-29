@@ -1,8 +1,23 @@
 #pragma once
+/**
+* \brief Структура даты
+*/
 struct Date {
 	int year, month, day;
-	Date(int year, int month, int day) :year{ year }, month{ month }, day{ day }{}
-	bool LessZero() {
-		return year < 0 || month < 0 || day < 0;
-	}
+
+	/**
+	* \brief Конструктор по умолчанию
+	*/
+	Date() = default;
+
+	/**
+	* \brief Конструктор с параметрами
+	*/
+	Date(int year, int month, int day);
+
+	/**
+	* \brief Метод, проверяющий меньше ли нуля дата
+	* \return Результат проверки
+	*/
+	bool LessZero();
 };
