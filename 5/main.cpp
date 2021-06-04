@@ -1,44 +1,68 @@
 #include "DateDifference.h"
 int main() {
 	setlocale(LC_ALL, "Russian");
-	Date Date1(2002, -3, 30);
-	Date Date2(2021, 5, 28);
-
-	if (Date1.LessZero() || Date2.LessZero())
-		cout << "Р”Р°С‚Р° РІРІРµРґРµРЅР° РЅРµРїСЂР°РІРёР»СЊРЅРѕ!" << endl;
-	else
-		cout << DateDifference1(Date1, Date2) << endl;
 
 	try {
-		cout << DateDifference2(Date1, Date2) << endl;
+		Date Date1(2002, -3, 30);
+		Date Date2(2021, 5, 28);
+		cout << DateDifference1(Date1, Date2) << endl;
+	}
+	catch(...){
+		cout << "Ошибка!Дата введена неправильно, без спецификатора throw" << endl;
+	}
+
+	try {
+			Date Date1(2002, -3, 30);
+			Date Date2(2021, 5, 28);
+			cout << DateDifference2(Date1, Date2) << endl;
 	}
 	catch (int) {
-		cout << "РћС€РёР±РєР°!Р—РЅР°РјРµРЅР°С‚РµР»СЊ СЂР°РІРµРЅ 0, СЃРїРµС†РёС„РёРєР°С‚РѕСЂ throw" << endl;
+		cout << "Ошибка!Дата введена неправильно, спецификатор throw" << endl;
 	}
 
 	try {
-		cout << DateDifference3(Date1, Date2) << endl;
+		try {
+			Date Date1(2002, -3, 30);
+			Date Date2(2021, 5, 28);
+			cout << DateDifference3(Date1, Date2) << endl;
+		}
+		catch (int) { throw invalid_argument{ "Ошибка!Дата введена неправильно, стандартное исключение" }; }
 	}
 	catch (invalid_argument error) {
 		cerr << error.what() << endl;
 	}
 
 	try {
-		cout << DateDifference4(Date1, Date2) << endl;
+		try {
+			Date Date1(2002, -3, 30);
+			Date Date2(2021, 5, 28);
+			cout << DateDifference4(Date1, Date2) << endl;
+		}
+		catch (int) { throw MyException(); }
 	}
 	catch (MyException) {
-		cerr << "РћС€РёР±РєР°!Р—РЅР°РјРµРЅР°С‚РµР»СЊ СЂР°РІРµРЅ 0, РїСѓСЃС‚РѕР№ РєР»Р°СЃСЃ" << endl;
+		cerr << "Ошибка!Дата введена неправильно, пустой класс" << endl;
 	}
 
 	try {
-		cout << DateDifference5(Date1, Date2) << endl;
+		try {
+			Date Date1(2002, -3, 30);
+			Date Date2(2021, 5, -28);
+			cout << DateDifference5(Date1, Date2) << endl;
+		}
+		catch (int) { throw MyException2("Ошибка!Дата введена неправильно, независимый класс с полями-параметрами функции"); }
 	}
 	catch (MyException2 error) {
 		cerr << error.message << endl;
 	}
 
 	try {
-		cout << DateDifference6(Date1, Date2) << endl;
+		try {
+			Date Date1(2002, 3, 30);
+			Date Date2(2021, -5, 28);
+			cout << DateDifference6(Date1, Date2) << endl;
+		}
+		catch (int) { throw MyException3("Ошибка!Дата введена неправильно, класс наследник"); }
 	}
 	catch (MyException3 error) {
 		cerr << error.what() << endl;
