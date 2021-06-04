@@ -3,14 +3,14 @@
 #include<iostream>
 using namespace std;
 /**
-* \brief Класс насследник от стандартного исключения, для возврата ошибки
+* \brief В Р»Р°СЃСЃ РЅР°СЃСЃР»РµРґРЅРёРє РѕС‚ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РёСЃРєР»СЋС‡РµРЅРёВ¤, РґР»В¤ РІРѕР·РІСЂР°С‚Р° РѕС€РёР±РєРё
 */
 class MyException3 :public invalid_argument {
 public:
 	explicit MyException3(const string& message);
 
 	/**
-	* \brief Деструктор по умолчанию
+	* \brief Ж’РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	~MyException3();
 };

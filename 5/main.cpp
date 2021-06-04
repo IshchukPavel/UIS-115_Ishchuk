@@ -8,7 +8,7 @@ int main() {
 		cout << DateDifference1(Date1, Date2) << endl;
 	}
 	catch(...){
-		cout << "Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, áåç ñïåöèôèêàòîğà throw" << endl;
+		cout << "ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, Ğ±ĞµĞ· ÑĞ¿ĞµÑ†Ğ¸Ñ„Ğ¸ĞºĞ°Ñ‚Ğ¾Ñ€Ğ° throw" << endl;
 	}
 
 	try {
@@ -17,7 +17,7 @@ int main() {
 			cout << DateDifference2(Date1, Date2) << endl;
 	}
 	catch (int) {
-		cout << "Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, ñïåöèôèêàòîğ throw" << endl;
+		cout << "ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, ÑĞ¿ĞµÑ†Ğ¸Ñ„Ğ¸ĞºĞ°Ñ‚Ğ¾Ñ€ throw" << endl;
 	}
 
 	try {
@@ -26,7 +26,7 @@ int main() {
 			Date Date2(2021, 5, 28);
 			cout << DateDifference3(Date1, Date2) << endl;
 		}
-		catch (int) { throw invalid_argument{ "Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, ñòàíäàğòíîå èñêëş÷åíèå" }; }
+		catch (int) { throw invalid_argument{ "ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, ÑÑ‚Ğ°Ğ½Ğ´Ğ°Ñ€Ñ‚Ğ½Ğ¾Ğµ Ğ¸ÑĞºĞ»ÑÑ‡ĞµĞ½Ğ¸Ğµ" }; }
 	}
 	catch (invalid_argument error) {
 		cerr << error.what() << endl;
@@ -41,7 +41,7 @@ int main() {
 		catch (int) { throw MyException(); }
 	}
 	catch (MyException) {
-		cerr << "Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, ïóñòîé êëàññ" << endl;
+		cerr << "ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, Ğ¿ÑƒÑÑ‚Ğ¾Ğ¹ ĞºĞ»Ğ°ÑÑ" << endl;
 	}
 
 	try {
@@ -50,7 +50,7 @@ int main() {
 			Date Date2(2021, 5, -28);
 			cout << DateDifference5(Date1, Date2) << endl;
 		}
-		catch (int) { throw MyException2("Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, íåçàâèñèìûé êëàññ ñ ïîëÿìè-ïàğàìåòğàìè ôóíêöèè"); }
+		catch (int) { throw MyException2("ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, Ğ½ĞµĞ·Ğ°Ğ²Ğ¸ÑĞ¸Ğ¼Ñ‹Ğ¹ ĞºĞ»Ğ°ÑÑ Ñ Ğ¿Ğ¾Ğ»ÑĞ¼Ğ¸-Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ğ°Ğ¼Ğ¸ Ñ„ÑƒĞ½ĞºÑ†Ğ¸Ğ¸"); }
 	}
 	catch (MyException2 error) {
 		cerr << error.message << endl;
@@ -62,7 +62,7 @@ int main() {
 			Date Date2(2021, -5, 28);
 			cout << DateDifference6(Date1, Date2) << endl;
 		}
-		catch (int) { throw MyException3("Îøèáêà!Äàòà ââåäåíà íåïğàâèëüíî, êëàññ íàñëåäíèê"); }
+		catch (int) { throw MyException3("ĞÑˆĞ¸Ğ±ĞºĞ°!Ğ”Ğ°Ñ‚Ğ° Ğ²Ğ²ĞµĞ´ĞµĞ½Ğ° Ğ½ĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾, ĞºĞ»Ğ°ÑÑ Ğ½Ğ°ÑĞ»ĞµĞ´Ğ½Ğ¸Ğº"); }
 	}
 	catch (MyException3 error) {
 		cerr << error.what() << endl;

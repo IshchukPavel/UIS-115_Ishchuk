@@ -2,14 +2,14 @@
 #include<string>
 using namespace std;
 /**
-* \brief Независимый класс с полями, для возврата ошибки
+* \brief РќРµР·Р°РІРёСЃРёРјС‹Р№ РєР»Р°СЃСЃ СЃ РїРѕР»СЏРјРё, РґР»СЏ РІРѕР·РІСЂР°С‚Р° РѕС€РёР±РєРё
 */
 class MyException2 {
 public:
 	string message;
 	explicit MyException2(const string &message);
 	/**
-	* \brief Деструктор по умолчанию
+	* \brief Р”РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	*/
 	~MyException2();
 };
